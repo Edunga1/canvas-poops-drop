@@ -8,7 +8,7 @@ export default class Nozzle extends Unit {
     this.rightSize = 107;
     this.gapRate = 1.5;
     this.chancePoop = 0.98;
-    this.minChancePoop = 0.9;
+    this.minChancePoop = 0.7;
     this.maxChancePoop = this.chancePoop;
     this.poopShadowRate = 1.2;
     this.poopPosYRate = 0.2;
@@ -91,6 +91,7 @@ export default class Nozzle extends Unit {
   }
 
   increaseSensitivity() {
+    this.acceleration = 1;
     this.chancePoop = Math.max(this.chancePoop * 0.9995, this.minChancePoop);
   }
 
