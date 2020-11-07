@@ -6,7 +6,7 @@ class App {
     this.context = this.canvas.getContext("2d");
     document.body.appendChild(this.canvas);
     window.addEventListener("resize", this.resize.bind(this));
-    this.canvas.addEventListener("mousemove", this.fever.bind(this));
+    this.canvas.addEventListener("touchmove", this.fever.bind(this));
 
     this.nozzel = new Nozzel();
     this.resize();
